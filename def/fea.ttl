@@ -1,0 +1,305 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix fea: <http://vocab.data.gov/def/fea#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://vocab.data.gov/def/fea> a owl:Ontology;
+    dc:title "FEA Vocabulary";
+    dc:modified "2015-03-26"^^xsd:date;
+    vann:preferredNamespaceUri "http://vocab.data.gov/def/fea#";
+    vann:preferredNamespacePrefix "fea";
+    foaf:page <http://vocab.data.gov/def/fea.html>;
+    dc:creator <http://vocab.data.gov/def/fea#> .
+
+<http://vocab.data.gov/def/fea#> a foaf:Person .
+
+fea:HumanResource a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "Human Resource";
+    rdfs:comment "This class refers to the workforce";
+    rdfs:subClassOf fea:Resource .
+
+fea:StrategicOutcome a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "Strategic Outcome";
+    rdfs:comment """Strategic Outcomes represent broad, policy priorities that drive the direction of government (such as to Secure the Homeland or Expand E-Government).
+PRM volume 1, p.13""";
+    rdfs:subClassOf fea:ValuePoint .
+
+fea:QuasiOfficialAgency a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "Quasi Official Agency";
+    rdfs:comment "Quasi Official Agency of the US government";
+    rdfs:subClassOf fea:Agency .
+
+fea:Commission a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "Commission";
+    rdfs:comment "Us government commission";
+    rdfs:subClassOf fea:GovernmentBody .
+
+fea:Citizen a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "Citizen";
+    rdfs:comment "Citizen of the United States of Americe";
+    rdfs:subClassOf fea:Party .
+
+fea:IndependentAgency a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "Independent Agency";
+    rdfs:comment "Independent Agency of the US government";
+    rdfs:subClassOf fea:Agency .
+
+fea:Budget a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "Budget";
+    rdfs:subClassOf fea:FEA_EnterpriseConcept .
+
+fea:ExecutiveAgency a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "Executive Agency";
+    rdfs:comment "Executive Agency of the US government";
+    rdfs:subClassOf fea:Agency .
+
+fea:Standard a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "Standard";
+    rdfs:comment "Technology standard";
+    rdfs:subClassOf fea:FEA_TechnologyConcept .
+
+fea:Office a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "Office";
+    rdfs:comment "US government office";
+    rdfs:subClassOf fea:GovernmentBody .
+
+fea:FEA_TechnologyConcept a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "FEA Technology Concept";
+    rdfs:subClassOf fea:FEA_Concept .
+
+fea:Technology a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "Technology";
+    rdfs:comment "Technology means Information Technology";
+    rdfs:subClassOf
+        fea:FEA_TechnologyConcept,
+        fea:ValuePoint .
+
+fea:IT_Initiative a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "IT Initiative";
+    rdfs:comment "A program of work that implements information technology based capabilities.";
+    rdfs:subClassOf fea:FEA_EnterpriseConcept .
+
+fea:Board a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "Board";
+    rdfs:comment "US government board";
+    rdfs:subClassOf fea:GovernmentBody .
+
+fea:OtherFixedAsset a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "Other Fixed Asset";
+    rdfs:comment "This class includes any fixed assets such as vehicle fleets, facilities and other equipment.";
+    rdfs:subClassOf fea:Resource .
+
+fea:OrganizationEntity a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "Organization Entity";
+    rdfs:subClassOf fea:Party .
+
+fea:Partition a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "Partition";
+    rdfs:comment """Each reference model has an extensional  property based on partitioning. This reveals implicit semantics in each reference model.
+""";
+    rdfs:subClassOf fea:FEA_ArchitectureConcept .
+
+fea:Process a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "Process";
+    rdfs:comment """The BRM includes a Mode of Delivery Business Area that is designed to identify at a very high level the process that is being used to achieve an intended purpose.
+PRM volume 1, p.16""";
+    rdfs:subClassOf fea:ValuePoint .
+
+fea:Mission a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "Mission";
+    rdfs:comment "Missions are carried out by the organizational entities";
+    rdfs:subClassOf fea:FEA_EnterpriseConcept .
+
+fea:CivilServant a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "Civil Servant";
+    rdfs:comment "An employee of the US Government";
+    rdfs:subClassOf fea:Party .
+
+fea:FEA_Concept a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "FEA Concept" .
+
+fea:Resource a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "Resource";
+    rdfs:subClassOf fea:ValuePoint .
+
+fea:FederalEnterpriseArchitecture a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "Federal Enterprise Architecture";
+    rdfs:comment "To facilitate efforts to transform the Federal Government to one that is citizen-centered, results-oriented, and market-based, the Office of Management and Budget (OMB) is developing the Federal Enterprise Architecture (FEA), a business-based framework for Governmentwide improvement.";
+    rdfs:subClassOf fea:FEA_ArchitectureConcept .
+
+fea:Council a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "Council";
+    rdfs:comment "US Government council";
+    rdfs:subClassOf fea:GovernmentBody .
+
+fea:FEA_ArchitectureConcept a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "FEA Architecture Concept";
+    rdfs:subClassOf fea:FEA_Concept .
+
+fea:FEA_Model a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "FEA Model";
+    rdfs:comment """1, the FEA is being constructed through a collection of interrelated
+“reference models” designed to facilitate cross-agency analysis and the identification of duplicative investments, gaps, and opportunities for collaboration within and across Federal Agencies.""";
+    rdfs:subClassOf fea:FEA_ArchitectureConcept .
+
+fea:GovernmentBody a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "Government Body";
+    rdfs:comment "Any US government organization";
+    rdfs:subClassOf fea:OrganizationEntity .
+
+fea:Agency a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "Agency";
+    rdfs:comment "An agency of the US government";
+    rdfs:subClassOf
+        fea:GovernmentBody,
+        fea:ValuePoint .
+
+fea:FEA_EnterpriseConcept a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "FEA Enterprise Concept";
+    rdfs:subClassOf fea:FEA_Concept .
+
+fea:Party a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "Party";
+    rdfs:subClassOf
+        fea:Customer,
+        fea:FEA_EnterpriseConcept .
+
+fea:ValuePoint a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "ValuePoint";
+    rdfs:comment "The point at which value is measured.";
+    rdfs:subClassOf fea:FEA_EnterpriseConcept .
+
+fea:Customer a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "Customer";
+    rdfs:comment """The diverse nature of federal programs means that there are many customers spanning the citizen, business, other government, and internal categories.  Some customers
+receive direct government services, such as veterans receiving health care from the Veterans Health Administration. Other “customers” are those subject to regulatory activities, such as large businesses conforming to safety regulations administered by the Occupational Safety and Health Administration. Importantly, the citizen is generally considered to be the ultimate “customer” of government activities regardless of the nature of the customer relationship.
+PRM volume 1, p.14""";
+    rdfs:subClassOf fea:ValuePoint .
+
+fea:IndustryBody a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "Industry Body";
+    rdfs:comment "Any non government organization";
+    rdfs:subClassOf fea:OrganizationEntity .
+
+fea:Company a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "Company";
+    rdfs:comment "A commercial organization";
+    rdfs:subClassOf fea:IndustryBody .
+
+fea:intentOf a rdf:Property, owl:InverseFunctionalProperty;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "intentOf";
+    rdfs:domain fea:Mission;
+    rdfs:range fea:OrganizationEntity .
+
+fea:hasIntent a rdf:Property, owl:FunctionalProperty;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "hasIntent";
+    rdfs:domain fea:OrganizationEntity;
+    rdfs:range fea:Mission .
+
+fea:allignedWith a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "allignedWith" .
+
+fea:supportedBy a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "supportedBy" .
+
+fea:undertakenBy a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "undertakenBy";
+    rdfs:domain fea:IT_Initiative;
+    rdfs:range fea:Agency .
+
+fea:undertakes a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "undertakes";
+    rdfs:domain fea:Agency;
+    rdfs:range fea:IT_Initiative .
+
+fea:drawsUpon a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "drawsUpon";
+    rdfs:domain fea:FEA_Model;
+    rdfs:range fea:FEA_Model .
+
+fea:buildsOn a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "buildsOn";
+    rdfs:domain fea:Partition;
+    rdfs:range fea:Partition .
+
+fea:comprises a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "comprises" .
+
+fea:isComprisedOf a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "isComprisedOf" .
+
+fea:dependsOn a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "dependsOn";
+    rdfs:domain fea:Partition;
+    rdfs:range fea:Partition .
+
+fea:isPartOf a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "is part of";
+    rdfs:comment "used to describe part of relationships, such as, for example, the fact that one organization is part of another (departmental hierarchy)." .
+
+fea:date a rdf:Property, owl:DatatypeProperty, owl:FunctionalProperty;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "date";
+    rdfs:range xsd:date .
+
+fea:description a rdf:Property, owl:DatatypeProperty, owl:FunctionalProperty;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "description";
+    rdfs:domain fea:FEA_Concept;
+    rdfs:range xsd:string .
+
+fea:mnemonic a rdf:Property, owl:DatatypeProperty;
+    rdfs:isDefinedBy <http://vocab.data.gov/def/fea>;
+    rdfs:label "mnemonic";
+    rdfs:domain fea:FEA_Concept;
+    rdfs:range xsd:string .

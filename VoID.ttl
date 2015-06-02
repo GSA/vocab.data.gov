@@ -1,0 +1,232 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix VoID: <http://rdfs.org/ns/void#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://vocab.data.gov/VoID> a owl:Ontology;
+    dc:title "Vocabulary of Interlinked Datasets (VoID)";
+    dc:description """http://www.w3.org/TR/void/
+
+
+The Vocabulary of Interlinked Datasets (VoID) is concerned with metadata about RDF datasets. It is an RDF Schema vocabulary that provides terms and patterns for describing RDF datasets, and is intended as a bridge between the publishers and users of RDF data. VoiD descriptions can be used in many situations, ranging from data discovery to cataloging and archiving of datasets, but most importantly it helps users find the right data for their tasks.
+""";
+    dc:modified "2015-03-26"^^xsd:date;
+    vann:preferredNamespaceUri "http://rdfs.org/ns/void#";
+    vann:preferredNamespacePrefix "VoID";
+    foaf:page <http://vocab.data.gov/VoID.html>;
+    dc:creator <http://vocab.data.gov/VoID#> .
+
+<http://vocab.data.gov/VoID#> a foaf:Person .
+
+VoID:Dataset a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "dataset";
+    rdfs:comment "A set of RDF triples that are published, maintained or aggregated by a single provider.";
+    rdfs:subClassOf dcmitype:Dataset .
+
+VoID:Linkset a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "linkset";
+    rdfs:comment "A collection of RDF links between two void:Datasets.";
+    rdfs:subClassOf VoID:Dataset .
+
+VoID:TechnicalFeature a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "technical feature";
+    rdfs:comment "A technical feature of a void:Dataset, such as a supported RDF serialization format." .
+
+VoID:DatasetDescription a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "dataset description";
+    rdfs:comment "A web resource whose foaf:primaryTopic or foaf:topics include void:Datasets.";
+    rdfs:subClassOf foaf:Document .
+
+VoID:feature a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "feature";
+    rdfs:domain VoID:Dataset;
+    rdfs:range VoID:TechnicalFeature .
+
+VoID:subset a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "has subset";
+    rdfs:domain VoID:Dataset;
+    rdfs:range VoID:Dataset .
+
+VoID:target a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "Target";
+    rdfs:comment "One of the two datasets linked by the Linkset.";
+    rdfs:domain VoID:Linkset;
+    rdfs:range VoID:Dataset .
+
+VoID:sparqlEndpoint a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "has a SPARQL endpoint at";
+    rdfs:domain VoID:Dataset .
+
+VoID:linkPredicate a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "a link predicate";
+    rdfs:domain VoID:Linkset;
+    rdfs:range rdf:Property .
+
+VoID:exampleResource a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "example resource of dataset";
+    rdfs:domain VoID:Dataset;
+    rdfs:range rdfs:Resource .
+
+VoID:vocabulary a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "vocabulary";
+    rdfs:comment "A vocabulary that is used in the dataset.";
+    rdfs:domain VoID:Dataset .
+
+VoID:subjectsTarget a rdf:Property, owl:FunctionalProperty;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "Subjects Target";
+    rdfs:comment "The dataset describing the subjects of triples contained in the Linkset.";
+    rdfs:domain VoID:Linkset;
+    rdfs:range VoID:Dataset;
+    rdfs:subPropertyOf VoID:target .
+
+VoID:objectsTarget a rdf:Property, owl:FunctionalProperty;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "Objects Target";
+    rdfs:comment "The dataset describing the objects of the triples contained in the Linkset.";
+    rdfs:domain VoID:Linkset;
+    rdfs:range VoID:Dataset;
+    rdfs:subPropertyOf VoID:target .
+
+VoID:dataDump a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "Data Dump";
+    rdfs:comment "An RDF dump, partial or complete, of a void:Dataset.";
+    rdfs:domain VoID:Dataset;
+    rdfs:range rdfs:Resource .
+
+VoID:uriLookupEndpoint a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "has an URI look-up endpoint at";
+    rdfs:comment "Defines a simple URI look-up protocol for accessing a dataset.";
+    rdfs:domain VoID:Dataset .
+
+VoID:uriRegexPattern a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "has URI regular expression pattern";
+    rdfs:comment "Defines a regular expression pattern matching URIs in the dataset.";
+    rdfs:domain VoID:Dataset .
+
+VoID:class a rdf:Property, owl:FunctionalProperty;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "class";
+    rdfs:comment "The rdfs:Class that is the rdf:type of all entities in a class-based partition.";
+    rdfs:domain VoID:Dataset;
+    rdfs:range rdfs:Class .
+
+VoID:classes a rdf:Property, owl:DatatypeProperty;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "classes";
+    rdfs:comment "The total number of distinct classes in a void:Dataset. In other words, the number of distinct resources occuring as objects of rdf:type triples in the dataset.";
+    rdfs:domain VoID:Dataset;
+    rdfs:range xsd:integer .
+
+VoID:classPartition a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "class partition";
+    rdfs:comment "A subset of a void:Dataset that contains only the entities of a certain rdfs:Class.";
+    rdfs:domain VoID:Dataset;
+    rdfs:range VoID:Dataset;
+    rdfs:subPropertyOf VoID:subset .
+
+VoID:distinctObjects a rdf:Property, owl:DatatypeProperty;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "distinct objects";
+    rdfs:comment "The total number of distinct objects in a void:Dataset. In other words, the number of distinct resources that occur in the object position of triples in the dataset. Literals are included in this count.";
+    rdfs:domain VoID:Dataset;
+    rdfs:range xsd:integer .
+
+VoID:distinctSubjects a rdf:Property, owl:DatatypeProperty;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "distinct subjects";
+    rdfs:comment "The total number of distinct subjects in a void:Dataset. In other words, the number of distinct resources that occur in the subject position of triples in the dataset.";
+    rdfs:domain VoID:Dataset;
+    rdfs:range xsd:integer .
+
+VoID:documents a rdf:Property, owl:DatatypeProperty;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "number of documents";
+    rdfs:comment "The total number of documents, for datasets that are published as a set of individual documents, such as RDF/XML documents or RDFa-annotated web pages. Non-RDF documents, such as web pages in HTML or images, are usually not included in this count. This property is intended for datasets where the total number of triples or entities is hard to determine. void:triples or void:entities should be preferred where practical.";
+    rdfs:domain VoID:Dataset;
+    rdfs:range xsd:integer .
+
+VoID:entities a rdf:Property, owl:DatatypeProperty;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "number of entities";
+    rdfs:comment "The total number of entities that are described in a void:Dataset.";
+    rdfs:domain VoID:Dataset;
+    rdfs:range xsd:integer .
+
+VoID:inDataset a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "in dataset";
+    rdfs:comment "Points to the void:Dataset that a document is a part of.";
+    rdfs:domain foaf:Document;
+    rdfs:range VoID:Dataset;
+    rdfs:subPropertyOf dcterms:isPartOf .
+
+VoID:openSearchDescription a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "open search description";
+    rdfs:comment "An OpenSearch description document for a free-text search service over a void:Dataset.";
+    rdfs:domain VoID:Dataset;
+    rdfs:range foaf:Document .
+
+VoID:properties a rdf:Property, owl:DatatypeProperty;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "number of properties";
+    rdfs:comment "The total number of distinct properties in a void:Dataset. In other words, the number of distinct resources that occur in the predicate position of triples in the dataset.";
+    rdfs:domain VoID:Dataset;
+    rdfs:range xsd:integer .
+
+VoID:property a rdf:Property, owl:FunctionalProperty;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "property";
+    rdfs:comment "The rdf:Property that is the predicate of all triples in a property-based partition.";
+    rdfs:domain VoID:Dataset;
+    rdfs:range rdf:Property .
+
+VoID:propertyPartition a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "property partition";
+    rdfs:comment "A subset of a void:Dataset that contains only the triples of a certain rdf:Property.";
+    rdfs:domain VoID:Dataset;
+    rdfs:range VoID:Dataset;
+    rdfs:subPropertyOf VoID:subset .
+
+VoID:rootResource a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "root resource";
+    rdfs:comment "A top concept or entry point for a void:Dataset that is structured in a tree-like fashion. All resources in a dataset can be reached by following links from its root resources in a small number of steps.";
+    rdfs:domain VoID:Dataset .
+
+VoID:triples a rdf:Property, owl:DatatypeProperty;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "number of triples";
+    rdfs:comment "The total number of triples contained in a void:Dataset.";
+    rdfs:domain VoID:Dataset;
+    rdfs:range xsd:integer .
+
+VoID:uriSpace a rdf:Property, owl:DatatypeProperty;
+    rdfs:isDefinedBy <http://vocab.data.gov/VoID>;
+    rdfs:label "URI space";
+    rdfs:comment "A URI that is a common string prefix of all the entity URIs in a void:Dataset.";
+    rdfs:domain VoID:Dataset;
+    rdfs:range rdfs:Literal .

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:vann="http://purl.org/vocab/vann/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <owl:Ontology rdf:about="http://vocab.data.gov/hosp">
+    <dc:title>Hospital Vocabulary</dc:title>
+    <dc:description>A RDF Schema that defines concepts and relationships used for Hospital data.</dc:description>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-03-29</dc:modified>
+    <vann:preferredNamespaceUri>http://health.data.gov/def/hospital/</vann:preferredNamespaceUri>
+    <vann:preferredNamespacePrefix>hosp</vann:preferredNamespacePrefix>
+    <foaf:page rdf:resource="http://vocab.data.gov/hosp.html"/>
+    <dc:creator rdf:resource="http://vocab.data.gov/hosp#www.cms.gov"/>
+  </owl:Ontology>
+
+  <foaf:Person rdf:about="http://vocab.data.gov/hosp#www.cms.gov">
+    <foaf:nick>www.cms.gov</foaf:nick>
+    <foaf:homepage rdf:resource="http://www.cms.gov/"/>
+  </foaf:Person>
+
+  <foaf:Organization rdf:about="http://vocab.data.gov/hosp#Centers%20for%20Medicare%20and%20Medicaid%20Services">
+    <foaf:member rdf:resource="http://vocab.data.gov/hosp#www.cms.gov"/>
+    <foaf:name>Centers for Medicare and Medicaid Services</foaf:name>
+    <foaf:homepage rdf:resource="http://www.cms.gov/"/>
+  </foaf:Organization>
+
+  <rdfs:Class rdf:about="http://health.data.gov/def/hospital/HospitalOwnershipType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.data.gov/hosp"/>
+    <rdfs:label>HospitalOwnershipType</rdfs:label>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://health.data.gov/def/hospital/HospitalType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.data.gov/hosp"/>
+    <rdfs:label>HospitalType</rdfs:label>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://health.data.gov/def/hospital/Hospital">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.data.gov/hosp"/>
+    <rdfs:label>Hospital</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdfs:Class>
+
+  <rdf:Property rdf:about="http://health.data.gov/def/hospital/ownership">
+    <rdfs:isDefinedBy rdf:resource="http://vocab.data.gov/hosp"/>
+    <rdfs:label>ownership</rdfs:label>
+    <rdfs:domain rdf:resource="http://health.data.gov/def/hospital/Hospital"/>
+    <rdfs:range rdf:resource="http://health.data.gov/def/hospital/HospitalOwnershipType"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://health.data.gov/def/hospital/type">
+    <rdfs:isDefinedBy rdf:resource="http://vocab.data.gov/hosp"/>
+    <rdfs:label>type</rdfs:label>
+    <rdfs:domain rdf:resource="http://health.data.gov/def/hospital/Hospital"/>
+    <rdfs:range rdf:resource="http://health.data.gov/def/hospital/HospitalType"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://health.data.gov/def/hospital/treats">
+    <rdfs:isDefinedBy rdf:resource="http://vocab.data.gov/hosp"/>
+    <rdfs:label>treats</rdfs:label>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://health.data.gov/def/hospital/mpvProvider">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.data.gov/hosp"/>
+    <rdfs:label>mpvProvider</rdfs:label>
+    <rdfs:domain rdf:resource="http://health.data.gov/def/hospital/Hospital"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://health.data.gov/def/hospital/cacProvider">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.data.gov/hosp"/>
+    <rdfs:label>cacProvider</rdfs:label>
+    <rdfs:domain rdf:resource="http://health.data.gov/def/hospital/Hospital"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://health.data.gov/def/hospital/emergencyServices">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.data.gov/hosp"/>
+    <rdfs:label>emergencyServices</rdfs:label>
+    <rdfs:domain rdf:resource="http://health.data.gov/def/hospital/Hospital"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://health.data.gov/def/hospital/site">
+    <rdfs:isDefinedBy rdf:resource="http://vocab.data.gov/hosp"/>
+    <rdfs:label>site</rdfs:label>
+    <rdfs:domain rdf:resource="http://health.data.gov/def/hospital/Hospital"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://health.data.gov/def/hospital/accreditation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://vocab.data.gov/hosp"/>
+    <rdfs:label>accreditation</rdfs:label>
+    <rdfs:domain rdf:resource="http://health.data.gov/def/hospital/Hospital"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Property>
+
+</rdf:RDF>
