@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xml:base="https://vocab.data.gov"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+ <title>Data.gov Vocabularies</title>
+ <link>https://vocab.data.gov</link>
+ <description></description>
+ <language>en</language>
+<item>
+ <title>Data Reference Model</title>
+ <link>https://vocab.data.gov/def/drm</link>
+ <description>&lt;p&gt;This vocabulary has been imported from a file.&lt;/p&gt;
+</description>
+ <pubDate>Fri, 09 Mar 2012 15:12:24 +0000</pubDate>
+ <dc:creator>George.Thomas</dc:creator>
+ <guid isPermaLink="false">331 at https://vocab.data.gov</guid>
+</item>
+<item>
+ <title>FEA Vocabulary</title>
+ <link>https://vocab.data.gov/def/fea</link>
+ <description>&lt;p&gt;This vocabulary has been imported from a file.&lt;/p&gt;
+</description>
+ <pubDate>Thu, 22 Dec 2011 11:53:41 +0000</pubDate>
+ <dc:creator>George.Thomas</dc:creator>
+ <guid isPermaLink="false">219 at https://vocab.data.gov</guid>
+</item>
+<item>
+ <title>Government Data Vocabulary</title>
+ <link>https://vocab.data.gov/gd</link>
+ <description>&lt;p&gt;This vocabulary has been imported from a file.&lt;/p&gt;
+</description>
+ <pubDate>Fri, 23 Sep 2011 16:35:49 +0000</pubDate>
+ <dc:creator />
+ <guid isPermaLink="false">46 at https://vocab.data.gov</guid>
+</item>
+<item>
+ <title>Hospital Vocabulary</title>
+ <link>https://vocab.data.gov/hosp</link>
+ <description>&lt;p&gt;This vocabulary has been imported from a file.&lt;/p&gt;
+</description>
+ <pubDate>Thu, 22 Sep 2011 14:29:18 +0000</pubDate>
+ <dc:creator />
+ <guid isPermaLink="false">34 at https://vocab.data.gov</guid>
+</item>
+<item>
+ <title>Vocabulary of Interlinked Datasets (VoID)</title>
+ <link>https://vocab.data.gov/VoID</link>
+ <description>&lt;p&gt;This vocabulary has been imported from &lt;a href=&quot;http://rdfs.org/ns/void#&quot;&gt;http://rdfs.org/ns/void#&lt;/a&gt;.&lt;/p&gt;
+</description>
+ <pubDate>Sun, 27 Feb 2011 21:43:02 +0000</pubDate>
+ <dc:creator />
+ <guid isPermaLink="false">1 at https://vocab.data.gov</guid>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,105 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix gd: <http://reference.data.gov/def/govdata/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://vocab.data.gov/gd> a owl:Ontology;
+    dc:title "Government Data Vocabulary";
+    dc:description "A RDF Schema that defines concepts and relationships common to all Open Government Data.";
+    dc:modified "2015-03-26"^^xsd:date;
+    vann:preferredNamespaceUri "http://reference.data.gov/def/govdata/";
+    vann:preferredNamespacePrefix "gd";
+    foaf:page <http://vocab.data.gov/gd.html>;
+    dc:creator <http://vocab.data.gov/gd#George.Thomas> .
+
+<http://vocab.data.gov/gd#George.Thomas> a foaf:Person;
+    foaf:name "George Thomas";
+    foaf:homepage <> .
+
+<http://vocab.data.gov/gd#HHS> a foaf:Organization;
+    foaf:member <http://vocab.data.gov/gd#George.Thomas>;
+    foaf:name "HHS";
+    foaf:homepage <http://www.hhs.gov/> .
+
+gd:Report a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/gd>;
+    rdfs:label "Report" .
+
+gd:Record a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/gd>;
+    rdfs:label "Record" .
+
+gd:Site a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/gd>;
+    rdfs:label "Site" .
+
+gd:Country a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/gd>;
+    rdfs:label "Country";
+    rdfs:subClassOf rdfs:Resource .
+
+gd:State a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/gd>;
+    rdfs:label "State";
+    rdfs:subClassOf rdfs:Resource .
+
+gd:Survey a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/gd>;
+    rdfs:label "Survey" .
+
+gd:County a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/gd>;
+    rdfs:label "County" .
+
+gd:RecordSet a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://vocab.data.gov/gd>;
+    rdfs:label "RecordSet";
+    rdfs:subClassOf rdfs:Resource .
+
+gd:country a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/gd>;
+    rdfs:label "country";
+    rdfs:range gd:Country .
+
+gd:countyCode a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/gd>;
+    rdfs:label "countyCode";
+    rdfs:range gd:County .
+
+gd:percentage a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/gd>;
+    rdfs:label "percentage" .
+
+gd:count a rdf:Property, owl:DatatypeProperty;
+    rdfs:isDefinedBy <http://vocab.data.gov/gd>;
+    rdfs:label "count";
+    rdfs:range xsd:integer .
+
+gd:recordset a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/gd>;
+    rdfs:label "recordset";
+    rdfs:range gd:RecordSet .
+
+gd:denominator a rdf:Property, owl:DatatypeProperty;
+    rdfs:isDefinedBy <http://vocab.data.gov/gd>;
+    rdfs:label "denominator";
+    rdfs:range xsd:float .
+
+gd:record a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/gd>;
+    rdfs:label "record";
+    rdfs:domain gd:RecordSet;
+    rdfs:range gd:Record .
+
+gd:stateCode a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/gd>;
+    rdfs:label "stateCode";
+    rdfs:range gd:State .
+
+gd:median a rdf:Property;
+    rdfs:isDefinedBy <http://vocab.data.gov/gd>;
+    rdfs:label "median" .
