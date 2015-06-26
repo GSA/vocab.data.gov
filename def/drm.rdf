@@ -9,7 +9,7 @@
   <owl:Ontology rdf:about="http://vocab.data.gov/def/drm">
     <dc:title>Data Reference Model</dc:title>
     <dc:description>A metamodel for government data</dc:description>
-    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-03-26</dc:modified>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-06-26</dc:modified>
     <vann:preferredNamespaceUri>http://vocab.data.gov/def/drm#</vann:preferredNamespaceUri>
     <vann:preferredNamespacePrefix>drm</vann:preferredNamespacePrefix>
     <foaf:page rdf:resource="http://vocab.data.gov/def/drm.html"/>

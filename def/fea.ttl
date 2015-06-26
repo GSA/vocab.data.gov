@@ -9,7 +9,7 @@
 
 <http://vocab.data.gov/def/fea> a owl:Ontology;
     dc:title "FEA Vocabulary";
-    dc:modified "2015-03-26"^^xsd:date;
+    dc:modified "2015-06-26"^^xsd:date;
     vann:preferredNamespaceUri "http://vocab.data.gov/def/fea#";
     vann:preferredNamespacePrefix "fea";
     foaf:page <http://vocab.data.gov/def/fea.html>;

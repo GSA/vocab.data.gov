@@ -9,7 +9,7 @@
   <owl:Ontology rdf:about="http://vocab.data.gov/gd">
     <dc:title>Government Data Vocabulary</dc:title>
     <dc:description>A RDF Schema that defines concepts and relationships common to all Open Government Data.</dc:description>
-    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-03-27</dc:modified>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-06-26</dc:modified>
     <vann:preferredNamespaceUri>http://reference.data.gov/def/govdata/</vann:preferredNamespaceUri>
     <vann:preferredNamespacePrefix>gd</vann:preferredNamespacePrefix>
     <foaf:page rdf:resource="http://vocab.data.gov/gd.html"/>

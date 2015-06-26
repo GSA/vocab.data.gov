@@ -8,7 +8,7 @@
 <link rel="alternate" type="application/rdf+xml" href="VoID.rdf" title="RDF Schema (in RDF/XML)" />
 <link rel="alternate" type="text/turtle" href="VoID.ttl" title="RDF Schema (in Turtle)" />
 <link rel="shortcut icon" href="http://vocab.data.gov/sites/default/files/datagov_fusion_favicon.png" type="image/x-icon" />
-  <link type="text/css" rel="stylesheet" media="all" href="sites/default/files/css/css_0659a045a8473893bbace719ba8a23a5.css" />
+  <link type="text/css" rel="stylesheet" media="all" href="sites/default/files/css/css_102b33c72cde7b924efb9ab974c9f8f6.css" />
   <link type="text/css" rel="stylesheet" media="all" href="http://vocab.data.gov/sites/all/themes/fusion/fusion_core/css/grid12-960.css" />
   <!--[if IE 8]>
   <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/fusion/fusion_core/css/ie8-fixes.css" />
@@ -19,7 +19,7 @@
   <!--[if lte IE 6]>
   <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/fusion/fusion_core/css/ie6-fixes.css" />
   <![endif]-->
-    <script type="text/javascript" src="sites/default/files/js/js_e0085601d5035538047973f5e73044ae.js"></script>
+    <script type="text/javascript" src="sites/default/files/js/js_ab4cb4deb0ab9865dc7f1b70d14ff8ab.js"></script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
 jQuery.extend(Drupal.settings, { "basePath": "/", "neologism": { "voc_id": "1", "voc_title": "VoID", "json_url": "http://vocab.data.gov/neologism/json/classestree", "property_json_url": "http://vocab.data.gov/neologism/json/objectpropertytree" } });
@@ -53,7 +53,7 @@ Ext.BLANK_IMAGE_URL='http://vocab.data.gov/sites/all/modules/ext/ext/resources/i
 |
 Share
 |
-<a class="feed-icon" href="http://vocab.data.gov/rss.xml">
+<a class="feed-icon" href="rss.xml">
 <img width="16" height="16" title="Data.gov Vocabularies RSS" alt="Syndicate content" src="http://vocab.data.gov/sites/all/themes/datagov_fusion/images/feed-icon-28x28.png">
 </a>    </div>
   </div><!-- /block-inner -->
@@ -179,7 +179,7 @@ The Vocabulary of Interlinked Datasets (VoID) is concerned with metadata about R
               <param name="movie" value="/sites/all/modules/neologism/includes/Diagram.swf" />
               <param name="quality" value="high" />
               <param name="bgcolor" value="#ffffff" />
-              <param name="flashVars" value="editMode=&vocabulary=/VoID&token=b352a4fee2766fbbbbf1f65f9a036dea" />
+              <param name="flashVars" value="editMode=&vocabulary=/VoID&token=1d118aaad575b723b170eaebfaa30e36" />
               <param name="allowScriptAccess" value="sameDomain" />
               <embed src="sites/all/modules/neologism/includes/Diagram.swf" quality="high" bgcolor="#ffffff"
                   width="100%"
@@ -192,7 +192,7 @@ The Vocabulary of Interlinked Datasets (VoID) is concerned with metadata about R
                   allowScriptAccess="sameDomain"
                   type="application/x-shockwave-flash"
                   pluginspage="http://www.adobe.com/go/getflashplayer"
-                  flashVars="editMode=&vocabulary=/VoID&token=b352a4fee2766fbbbbf1f65f9a036dea" />
+                  flashVars="editMode=&vocabulary=/VoID&token=1d118aaad575b723b170eaebfaa30e36" />
       </object>
     </div><div id="description"><p>This vocabulary has been imported from <a href="http://rdfs.org/ns/void#">http://rdfs.org/ns/void#</a>.</p></div><div class="reference"><h2 id="sec_classes">Classes</h2><div id="node-2" class="term-node node teaser">
       <h3 id="Dataset">Class: VoID:Dataset</h3>
@@ -1215,5 +1215,5 @@ jQuery("#menu-primary-navigation-1 .dropdown-toggle").attr('id', '');
 
     </div><!-- /page-inner -->
   </div><!-- /page -->
-  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"9e3c89b07f","applicationID":"7148757","transactionName":"YlRbYxcHWxAFBxVYClseeFQRD1oNS0wCUAZdVF0XFQdSBk0=","queueTime":0,"applicationTime":24,"atts":"ThNYFV8dSB4=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-632.min.js"}</script></body>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"9e3c89b07f","applicationID":"7148757","transactionName":"YlRbYxcHWxAFBxVYClseeFQRD1oNS0wCUAZdVF0XFQdSBk0=","queueTime":0,"applicationTime":34,"atts":"ThNYFV8dSB4=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-632.min.js"}</script></body>
 </html>

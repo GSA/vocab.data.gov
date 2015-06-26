@@ -8,7 +8,7 @@
 
   <owl:Ontology rdf:about="http://vocab.data.gov/def/fea">
     <dc:title>FEA Vocabulary</dc:title>
-    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-03-28</dc:modified>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-06-26</dc:modified>
     <vann:preferredNamespaceUri>http://vocab.data.gov/def/fea#</vann:preferredNamespaceUri>
     <vann:preferredNamespacePrefix>fea</vann:preferredNamespacePrefix>
     <foaf:page rdf:resource="http://vocab.data.gov/def/fea.html"/>

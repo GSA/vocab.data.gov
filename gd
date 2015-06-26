@@ -8,7 +8,7 @@
 <link rel="alternate" type="application/rdf+xml" href="gd.rdf" title="RDF Schema (in RDF/XML)" />
 <link rel="alternate" type="text/turtle" href="gd.ttl" title="RDF Schema (in Turtle)" />
 <link rel="shortcut icon" href="http://vocab.data.gov/sites/default/files/datagov_fusion_favicon.png" type="image/x-icon" />
-  <link type="text/css" rel="stylesheet" media="all" href="sites/default/files/css/css_0659a045a8473893bbace719ba8a23a5.css" />
+  <link type="text/css" rel="stylesheet" media="all" href="sites/default/files/css/css_102b33c72cde7b924efb9ab974c9f8f6.css" />
   <link type="text/css" rel="stylesheet" media="all" href="http://vocab.data.gov/sites/all/themes/fusion/fusion_core/css/grid12-960.css" />
   <!--[if IE 8]>
   <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/fusion/fusion_core/css/ie8-fixes.css" />
@@ -19,7 +19,7 @@
   <!--[if lte IE 6]>
   <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/fusion/fusion_core/css/ie6-fixes.css" />
   <![endif]-->
-    <script type="text/javascript" src="sites/default/files/js/js_e0085601d5035538047973f5e73044ae.js"></script>
+    <script type="text/javascript" src="sites/default/files/js/js_ab4cb4deb0ab9865dc7f1b70d14ff8ab.js"></script>
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
 jQuery.extend(Drupal.settings, { "basePath": "/", "neologism": { "voc_id": "46", "voc_title": "gd", "json_url": "http://vocab.data.gov/neologism/json/classestree", "property_json_url": "http://vocab.data.gov/neologism/json/objectpropertytree" } });
@@ -53,7 +53,7 @@ Ext.BLANK_IMAGE_URL='http://vocab.data.gov/sites/all/modules/ext/ext/resources/i
 |
 Share
 |
-<a class="feed-icon" href="http://vocab.data.gov/rss.xml">
+<a class="feed-icon" href="rss.xml">
 <img width="16" height="16" title="Data.gov Vocabularies RSS" alt="Syndicate content" src="http://vocab.data.gov/sites/all/themes/datagov_fusion/images/feed-icon-28x28.png">
 </a>    </div>
   </div><!-- /block-inner -->
@@ -175,7 +175,7 @@ Share
               <param name="movie" value="/sites/all/modules/neologism/includes/Diagram.swf" />
               <param name="quality" value="high" />
               <param name="bgcolor" value="#ffffff" />
-              <param name="flashVars" value="editMode=&vocabulary=/gd&token=3e21d3d4f4b88814f434a9f28864865f" />
+              <param name="flashVars" value="editMode=&vocabulary=/gd&token=bc66b5715ab062300f3b6427d62c2c62" />
               <param name="allowScriptAccess" value="sameDomain" />
               <embed src="sites/all/modules/neologism/includes/Diagram.swf" quality="high" bgcolor="#ffffff"
                   width="100%"
@@ -188,7 +188,7 @@ Share
                   allowScriptAccess="sameDomain"
                   type="application/x-shockwave-flash"
                   pluginspage="http://www.adobe.com/go/getflashplayer"
-                  flashVars="editMode=&vocabulary=/gd&token=3e21d3d4f4b88814f434a9f28864865f" />
+                  flashVars="editMode=&vocabulary=/gd&token=bc66b5715ab062300f3b6427d62c2c62" />
       </object>
     </div><div id="description"><p>This vocabulary has been imported from a file.</p></div><div class="reference"><h2 id="sec_classes">Classes</h2><div id="node-50" class="term-node node teaser">
       <h3 id="Country">Class: gd:Country</h3>
@@ -845,5 +845,5 @@ jQuery("#menu-primary-navigation-1 .dropdown-toggle").attr('id', '');
 
     </div><!-- /page-inner -->
   </div><!-- /page -->
-  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"9e3c89b07f","applicationID":"7148757","transactionName":"YlRbYxcHWxAFBxVYClseeFQRD1oNS0wCUAZdVF0XFQdSBk0=","queueTime":0,"applicationTime":27,"atts":"ThNYFV8dSB4=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-632.min.js"}</script></body>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"9e3c89b07f","applicationID":"7148757","transactionName":"YlRbYxcHWxAFBxVYClseeFQRD1oNS0wCUAZdVF0XFQdSBk0=","queueTime":0,"applicationTime":23,"atts":"ThNYFV8dSB4=","errorBeacon":"bam.nr-data.net","agent":"js-agent.newrelic.com\/nr-632.min.js"}</script></body>
 </html>
