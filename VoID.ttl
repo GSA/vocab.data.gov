@@ -16,7 +16,7 @@
 
 The Vocabulary of Interlinked Datasets (VoID) is concerned with metadata about RDF datasets. It is an RDF Schema vocabulary that provides terms and patterns for describing RDF datasets, and is intended as a bridge between the publishers and users of RDF data. VoiD descriptions can be used in many situations, ranging from data discovery to cataloging and archiving of datasets, but most importantly it helps users find the right data for their tasks.
 """;
-    dc:modified "2015-06-26"^^xsd:date;
+    dc:modified "2015-10-01"^^xsd:date;
     vann:preferredNamespaceUri "http://rdfs.org/ns/void#";
     vann:preferredNamespacePrefix "VoID";
     foaf:page <http://vocab.data.gov/VoID.html>;

@@ -9,7 +9,7 @@
   <owl:Ontology rdf:about="http://vocab.data.gov/hosp">
     <dc:title>Hospital Vocabulary</dc:title>
     <dc:description>A RDF Schema that defines concepts and relationships used for Hospital data.</dc:description>
-    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-06-26</dc:modified>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-09-30</dc:modified>
     <vann:preferredNamespaceUri>http://health.data.gov/def/hospital/</vann:preferredNamespaceUri>
     <vann:preferredNamespacePrefix>hosp</vann:preferredNamespacePrefix>
     <foaf:page rdf:resource="http://vocab.data.gov/hosp.html"/>

@@ -11,7 +11,7 @@
 <http://vocab.data.gov/def/drm> a owl:Ontology;
     dc:title "Data Reference Model";
     dc:description "A metamodel for government data";
-    dc:modified "2015-06-26"^^xsd:date;
+    dc:modified "2015-09-22"^^xsd:date;
     vann:preferredNamespaceUri "http://vocab.data.gov/def/drm#";
     vann:preferredNamespacePrefix "drm";
     foaf:page <http://vocab.data.gov/def/drm.html>;
